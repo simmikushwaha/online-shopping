@@ -13,9 +13,10 @@ public class PageController {
 	public ModelAndView index()
 	{
 		
-		ModelAndView mv=new ModelAndView("page1");
+		ModelAndView mv=new ModelAndView("page");
 		
-		mv.addObject("greeting","hey all");
+		//mv.addObject("greeting","hey all");
+		mv.addObject("title","Flipkart");
 		return mv;
 		
 	}
