@@ -13,12 +13,24 @@ public class PageController {
 	public ModelAndView index()
 	{
 		
-		ModelAndView mv=new ModelAndView("page");
-		mv.addObject("greeting");
+		ModelAndView mv=new ModelAndView("page1");
+		
+		mv.addObject("greeting","hey all");
 		return mv;
 		
 	}
 
+	@RequestMapping(value= "/about")
+	public ModelAndView about()
+	{
+		
+		ModelAndView mv=new ModelAndView("page1");
+		
+		mv.addObject("title","About us");
+		mv.addObject("userClickAbout",true);
+		return mv;
+		
+	}
 	
 	/*@RequestMapping(value= "/test")
 	public ModelAndView index1(@RequestParam(value="greeting" ,required=false) String greeting)
