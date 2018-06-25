@@ -16,7 +16,8 @@ public class PageController {
 		ModelAndView mv=new ModelAndView("page");
 		
 		//mv.addObject("greeting","hey all");
-		mv.addObject("title","Flipkart");
+		mv.addObject("title","Home");
+		mv.addObject("userclickHome",true);
 		return mv;
 		
 	}
@@ -25,10 +26,24 @@ public class PageController {
 	public ModelAndView about()
 	{
 		
-		ModelAndView mv=new ModelAndView("page1");
+		ModelAndView mv=new ModelAndView("page");
 		
 		mv.addObject("title","About us");
 		mv.addObject("userClickAbout",true);
+		return mv;
+		
+	}
+	
+	
+	
+	@RequestMapping(value= "/contact")
+	public ModelAndView contact()
+	{
+		
+		ModelAndView mv=new ModelAndView("page");
+		
+		mv.addObject("title","Contact us");
+		mv.addObject("userClickcontact",true);
 		return mv;
 		
 	}
